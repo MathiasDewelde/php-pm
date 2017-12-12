@@ -925,7 +925,7 @@ EOF;
         //we can not use -q since this disables basically all header support
         //but since this is necessary at least in Symfony we can not use it.
         //e.g. headers_sent() returns always true, although wrong.
-        $commandline .= ' -C ' . ProcessUtils::escapeArgument($file);
+        $commandline .= ' -C ' . DeprecatedProcessUtils::escapeArgument($file);
 
         $process = new Process($commandline);
 
